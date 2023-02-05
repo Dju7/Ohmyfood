@@ -1,0 +1,15 @@
+@mixin flex($flex-direction, $justify-content, $align-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-content: $align-content;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin header-shadow {
+    box-shadow: 0 3px 3px rgb(137, 136, 136);
+}
+
+@mixin shadow-effect {
+    box-shadow: 0px 7px 10px rgba(183, 180, 180, 0.4);
+}

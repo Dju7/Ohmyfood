@@ -1,0 +1,13 @@
+.header {
+   @include flex(row, center, center, nowrap);
+   @include header-shadow;
+   padding: 1rem;
+   z-index: 1;
+   position: relative;
+
+   img {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+   }
+}

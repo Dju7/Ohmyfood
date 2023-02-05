@@ -1,0 +1,19 @@
+.receptionbox__btn {
+    margin: 1.2rem auto;
+    width: 10rem;
+    border-radius: 100vw;
+    text-align: center;
+    padding: 0.8rem;
+    background: linear-gradient(169deg,#e852ba, #443ab4);
+    color: $white;
+    font-size: 0.8rem; 
+    @include shadow-effect;
+}
+
+.stepbtn {
+    background-color: $grey-xlight;
+    border-radius: 20px;
+    padding: 0.5rem;
+    @include shadow-effect;
+    
+}
