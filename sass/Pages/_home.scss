@@ -42,19 +42,37 @@
     /*@include flex(column, center, center, nowrap);*/
     margin: 3rem 1rem;
     h3 {
-        margin: 0.7rem 0;
+        margin: 1.1rem 0;
     }
     &__list {
         @include flex(column, center, center, nowrap);
         gap: 1rem;
         margin: 1rem 0;
         width: 100%;
+        counter-reset: count;
+        li {
+            counter-increment: count;
+            position: relative;
+            &:before {
+                content: counter(count, decimal-leading-one);
+                position: absolute;
+                text-align: center;
+                width: 1rem;
+                padding: .2rem;  
+                aspect-ratio: 1 / 1;
+                background: rgb(147, 59, 202);  
+                border-radius: 100%; 
+                font-size: 0.9em; 
+                color: white; 
+                bottom: 1rem;
+                left: -15px;
+            }
+        }
     }
     .stepbtn {
-
         i {
-            margin-right: 1.2rem;
-            margin-left: 0.7rem;
+            margin-right: 1.3rem;
+            margin-left: 1rem;
             color: rgb(90, 90, 90);
             font-size: 1rem;
         }
