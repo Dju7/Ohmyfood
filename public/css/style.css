@@ -4,8 +4,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  line-height: 1;
-  margin: 0;
+  max-width: 1400px;
 }
 
 h1 {
@@ -96,20 +95,23 @@ html {
 } /*--- optional base font size ---*/
 /* ---Color principal --- */
 /* ---background-color ---*/
+/* --- Responsive ---*/
+/* --- Responsive template --- */
 .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  box-shadow: 0 3px 3px rgb(211, 209, 209);
+  box-shadow: 0 3px 3px rgb(213, 213, 213);
   padding: 0.9rem;
   z-index: 1;
   position: relative;
 }
 .header i {
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 1.3rem;
+  left: 1rem;
 }
 .header img {
   display: block;
@@ -121,6 +123,7 @@ html {
   background: #353535;
   color: #FFFFFF;
   padding: 25px;
+  padding-bottom: 2rem;
 }
 .footer__title {
   font-family: "shrikhand", cursive;
@@ -165,7 +168,7 @@ html {
 }
 .receptionbox__localisation p i {
   position: absolute;
-  left: -4ch;
+  left: -3ch;
   height: 1rem;
   font-size: 0.8rem;
 }
@@ -185,7 +188,6 @@ html {
   font-weight: 800;
 }
 .receptionbox__presentation p {
-  color: rgb(99, 98, 98);
   font-weight: 200;
   margin: 0;
 }
@@ -222,7 +224,7 @@ html {
   width: 1rem;
   padding: 0.2rem;
   aspect-ratio: 1/1;
-  background: rgb(147, 59, 202);
+  background: #9356dc;
   border-radius: 100%;
   font-size: 0.9em;
   color: white;
@@ -237,6 +239,7 @@ html {
 }
 .steps .stepbtn__title {
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .card-restaurant {
@@ -245,7 +248,7 @@ html {
   padding-bottom: 1.5rem;
 }
 .card-restaurant h3 {
-  padding: 2rem 0 0.5rem 0.7rem;
+  padding: 2rem 0 0.1rem 0.8rem;
 }
 .card-restaurant__list {
   display: flex;
@@ -257,6 +260,41 @@ html {
   padding: 0.7rem;
 }
 
+@media screen and (max-width: 992px) and (min-width: 600px) {
+  .card-restaurant__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: 993px) {
+  .card-restaurant__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .steps__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body {
+    margin: 0 auto;
+  }
+  .card-restaurant__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .steps__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 .heading-img {
   display: flex;
   flex-direction: row;
@@ -283,13 +321,14 @@ html {
   background: #F7F7F7;
   border-radius: 30px 30px 0 0;
   padding-top: 1rem;
-  margin-top: 2px;
+  margin-top: -35px;
   margin-bottom: 0;
   position: relative;
+  z-index: 1;
 }
 .restaurant-name h2 {
   font-family: "shrikhand", cursive;
-  padding: 0.3rem;
+  padding: 0.4rem;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -306,6 +345,9 @@ html {
   padding-top: 1rem;
 }
 
+.entry {
+  margin-bottom: 1rem;
+}
 .entry h4 {
   margin-left: 0.8rem;
   font-weight: 400;
@@ -319,13 +361,14 @@ html {
   margin: 0.3rem 0.8rem;
 }
 .entry span {
-  margin: 0;
+  margin: 0.2rem;
   padding: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 .entry p {
-  margin: 0.3rem;
+  margin: 0.2rem;
+  padding: 0.1rem 0;
   font-size: 0.7rem;
   color: grey;
 }
@@ -337,8 +380,7 @@ html {
 
 .dessert h4 {
   margin-left: 0.8rem;
-  color: grey;
-  padding-top: 1rem;
+  font-weight: 400;
 }
 .dessert__list {
   display: flex;
@@ -349,9 +391,9 @@ html {
   margin: 0rem 0.8rem;
 }
 .dessert span {
-  margin: 0;
+  margin: 0.2rem;
   padding: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 .dessert p {
@@ -365,10 +407,12 @@ html {
   top: 1.5rem;
 }
 
+.main-course {
+  margin-bottom: 1rem;
+}
 .main-course h4 {
   margin-left: 0.8rem;
-  color: grey;
-  padding-top: 1rem;
+  font-weight: 400;
 }
 .main-course__list {
   display: flex;
@@ -379,9 +423,9 @@ html {
   margin: 0.3rem 0.8rem;
 }
 .main-course span {
-  margin: 0;
+  margin: 0.2rem;
   padding: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 .main-course p {
@@ -412,7 +456,7 @@ html {
   border-radius: 100vw;
   text-align: center;
   padding: 0.8rem;
-  background: linear-gradient(169deg, #e852ba, #443ab4);
+  background: linear-gradient(170deg, hsl(310deg, 81%, 70%) 0%, hsl(272deg, 65%, 61%) 80%);
   color: #FFFFFF;
   font-size: 0.8rem;
   box-shadow: 0px 7px 10px rgba(170, 168, 168, 0.4);
@@ -430,14 +474,13 @@ html {
   background-color: #FFFFFF;
   width: 100%;
   border-radius: 20px;
-  padding: 0.5rem;
+  padding: 0.6rem 0 0.3rem 0.4rem;
   margin: 0.5rem;
   box-shadow: 0px 7px 10px rgba(170, 168, 168, 0.4);
   position: relative;
 }
 
 .card {
-  Flex: 1;
   border-radius: 25px;
   width: 100%;
   box-shadow: 0px 7px 10px rgba(170, 168, 168, 0.4);
@@ -445,7 +488,7 @@ html {
 .card p {
   padding: 0.3rem;
   margin: 0;
-  font-weight: 200;
+  font-weight: 300;
 }
 .card h4 {
   font-weight: 500;

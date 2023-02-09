@@ -1,12 +1,11 @@
 .card {
-    Flex: 1;
     border-radius: 25px;
     width: 100%;
     @include shadow-effect;
     p {
         padding: 0.3rem;
         margin: 0;
-        font-weight: 200;
+        font-weight: 300;
     }
     h4 {
         font-weight:500;
