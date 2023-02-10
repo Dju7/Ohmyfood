@@ -49,6 +49,7 @@
         margin: 1rem 0;
         width: 100%;
         counter-reset: count;
+        @include steps-responsive;
         li {
             counter-increment: count;
             position: relative;
@@ -94,34 +95,12 @@
         @include flex(column, center, center, nowrap);
         gap: 0.8rem;
         padding: 0.7rem;
+        @include grid-responsive;
         
     }
 }
 
-/*-- Responsive --*/
-
-@media screen and (max-width:992px) and (min-width:600px) {
-
-    .card-restaurant__list {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }  
-}
-
-    @media screen and (max-width:1400px) and (min-width:993px) {
-        .card-restaurant__list {
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-
-        .steps__list {
-            @include flex(row, start, center, nowrap);
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-         }
-
-}
+/*-- Responsive Large screen  --*/
 
 @media screen and (min-width: 1400px) {
     body {
@@ -143,11 +122,4 @@
         max-width: 1400px;
         margin: 1rem auto; 
     }
-
-   .steps__list {
-   @include flex(row, start, center, nowrap);
-   gap: 3rem;
-   max-width: 1400px;
-   margin:0 auto;
-  }
 }

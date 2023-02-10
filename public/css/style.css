@@ -212,6 +212,18 @@ html {
   width: 100%;
   counter-reset: count;
 }
+@media screen and (min-width: 992px) {
+  .steps__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
 .steps__list li {
   counter-increment: count;
   position: relative;
@@ -258,30 +270,14 @@ html {
   gap: 0.8rem;
   padding: 0.7rem;
 }
+@media screen and (min-width: 600px) {
+  .card-restaurant__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
 
-/*-- Responsive --*/
-@media screen and (max-width: 992px) and (min-width: 600px) {
-  .card-restaurant__list {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-}
-@media screen and (max-width: 1400px) and (min-width: 993px) {
-  .card-restaurant__list {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  .steps__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 3rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-}
+/*-- Responsive Large screen  --*/
 @media screen and (min-width: 1400px) {
   body {
     margin: 0 auto;
@@ -301,16 +297,6 @@ html {
   .steps h3 {
     max-width: 1400px;
     margin: 1rem auto;
-  }
-  .steps__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 3rem;
-    max-width: 1400px;
-    margin: 0 auto;
   }
 }
 .heading-img {
@@ -388,7 +374,11 @@ html {
   margin: 0.2rem;
   padding: 0.1rem 0;
   font-size: 0.7rem;
+  max-width: 80%;
   color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .entry .price {
   position: absolute;
@@ -417,7 +407,11 @@ html {
 .dessert p {
   margin: 0.3rem;
   font-size: 0.7rem;
+  max-width: 80%;
   color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dessert .price {
   position: absolute;
@@ -449,7 +443,11 @@ html {
 .main-course p {
   margin: 0.3rem;
   font-size: 0.7rem;
+  max-width: 80%;
   color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .main-course .price {
   position: absolute;
@@ -468,7 +466,7 @@ html {
   padding-bottom: 0.7rem;
 }
 
-/* -- responisve --*/
+/* -- responsive Large screen--*/
 @media screen and (min-width: 1400px) {
   .restaurant-name {
     max-width: 1400px;
@@ -529,7 +527,7 @@ html {
 }
 .card__img {
   width: 100%;
-  height: 7.5rem;
+  height: 8rem;
 }
 .card__img img {
   object-fit: cover;

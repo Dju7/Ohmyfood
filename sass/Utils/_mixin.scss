@@ -16,11 +16,17 @@
 
 /* --- Responsive template --- */
 
-@mixin tablet-template {
-    @media screen and (min-width: map-get($breackpoint, tablet)) {
+@mixin grid-responsive {
+    @media screen and (min-width: map-get($breackpoint, mobile)) {
         display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: 2fr;
-        gap: 1rem;
+        grid-template-columns: 50% 50%;
+    }
+}
+@mixin steps-responsive {
+    @media screen and (min-width: map-get($breackpoint, desktop)){
+        @include flex(row, start, center, nowrap);
+        gap: 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 }
