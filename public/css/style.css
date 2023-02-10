@@ -4,7 +4,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 1400px;
 }
 
 h1 {
@@ -260,6 +259,7 @@ html {
   padding: 0.7rem;
 }
 
+/*-- Responsive --*/
 @media screen and (max-width: 992px) and (min-width: 600px) {
   .card-restaurant__list {
     display: grid;
@@ -277,15 +277,30 @@ html {
     justify-content: start;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1400px) {
   body {
     margin: 0 auto;
+    width: 100%;
+  }
+  .card-restaurant h3 {
+    max-width: 1400px;
+    margin: 0 auto;
   }
   .card-restaurant__list {
     display: grid;
+    align-items: center;
+    margin: 0 auto;
     grid-template-columns: 50% 50%;
+    max-width: 1400px;
+  }
+  .steps h3 {
+    max-width: 1400px;
+    margin: 1rem auto;
   }
   .steps__list {
     display: flex;
@@ -293,6 +308,9 @@ html {
     justify-content: start;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 .heading-img {
@@ -321,7 +339,7 @@ html {
   background: #F7F7F7;
   border-radius: 30px 30px 0 0;
   padding-top: 1rem;
-  margin-top: -35px;
+  margin-top: -50px;
   margin-bottom: 0;
   position: relative;
   z-index: 1;
@@ -450,6 +468,21 @@ html {
   padding-bottom: 0.7rem;
 }
 
+/* -- responisve --*/
+@media screen and (min-width: 1400px) {
+  .restaurant-name {
+    max-width: 1400px;
+    margin: -50px auto;
+  }
+  .menu {
+    max-width: 1400px;
+    margin: 2rem auto 0 auto;
+  }
+  .order {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
 .receptionbox__btn {
   margin: 1.2rem auto;
   width: 11rem;
