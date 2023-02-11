@@ -7,19 +7,19 @@ body {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 p {
@@ -144,6 +144,17 @@ html {
   font-size: 0.6em;
 }
 
+/*--- Responsive large screen ---*/
+.footer__link {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer__title {
+  max-width: 1400px;
+  margin: 0 auto 20px auto;
+}
+
 .receptionbox {
   display: flex;
   flex-direction: column;
@@ -191,7 +202,7 @@ html {
   margin: 0;
 }
 .receptionbox__presentation a {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .steps {
@@ -348,6 +359,13 @@ html {
   margin: 0;
   padding-top: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .menu {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 30% 30% 30%;
+  }
+}
 
 .entry {
   margin-bottom: 1rem;
@@ -355,6 +373,15 @@ html {
 .entry h4 {
   margin-left: 0.8rem;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+.entry h4::after {
+  content: "";
+  margin: 0.3rem 0;
+  width: 2.2rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
 }
 .entry__list {
   display: flex;
@@ -372,6 +399,7 @@ html {
 }
 .entry p {
   margin: 0.2rem;
+  padding-bottom: 0.15rem;
   padding: 0.1rem 0;
   font-size: 0.7rem;
   max-width: 80%;
@@ -383,12 +411,21 @@ html {
 .entry .price {
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
+  top: 1.6rem;
 }
 
 .dessert h4 {
   margin-left: 0.8rem;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+.dessert h4::after {
+  content: "";
+  margin: 0.3rem 0;
+  width: 2.2rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
 }
 .dessert__list {
   display: flex;
@@ -406,6 +443,7 @@ html {
 }
 .dessert p {
   margin: 0.3rem;
+  padding-bottom: 0.15rem;
   font-size: 0.7rem;
   max-width: 80%;
   color: grey;
@@ -416,7 +454,7 @@ html {
 .dessert .price {
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
+  top: 1.6rem;
 }
 
 .main-course {
@@ -425,6 +463,15 @@ html {
 .main-course h4 {
   margin-left: 0.8rem;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+.main-course h4::after {
+  content: "";
+  margin: 0.3rem 0;
+  width: 2.2rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
 }
 .main-course__list {
   display: flex;
@@ -442,6 +489,7 @@ html {
 }
 .main-course p {
   margin: 0.3rem;
+  padding-bottom: 0.15rem;
   font-size: 0.7rem;
   max-width: 80%;
   color: grey;
@@ -452,7 +500,7 @@ html {
 .main-course .price {
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
+  top: 1.6rem;
 }
 
 .order {
@@ -464,6 +512,9 @@ html {
   background-color: #F7F7F7;
   margin: 0;
   padding-bottom: 0.7rem;
+}
+.order a {
+  font-size: 0.8rem;
 }
 
 /* -- responsive Large screen--*/
@@ -489,8 +540,12 @@ html {
   padding: 0.8rem;
   background: linear-gradient(170deg, hsl(310deg, 81%, 70%) 0%, hsl(272deg, 65%, 61%) 80%);
   color: #FFFFFF;
-  font-size: 0.8rem;
   box-shadow: 0px 7px 10px rgba(170, 168, 168, 0.4);
+}
+.receptionbox__btn:hover {
+  background: linear-gradient(170deg, rgb(243, 130, 224) 0%, rgb(168, 108, 220) 80%);
+  box-shadow: 0px 8px 11px rgba(97, 97, 97, 0.4);
+  text-shadow: 0 0 0 #FFFFFF;
 }
 
 .stepbtn {

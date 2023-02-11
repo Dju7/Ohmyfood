@@ -4,10 +4,14 @@
     border-radius: 100vw;
     text-align: center;
     padding: 0.8rem; 
-    background: linear-gradient(170deg, hsla(310, 81%, 70%, 1) 0%, hsla(272, 65%, 61%, 1) 80%);
+    background: $linear-btn;
     color: $white;
-    font-size: 0.8rem; 
     @include shadow-effect;
+    &:hover {
+        background: $linear-btn-light;
+        @include shadow-effect-dark;
+        text-shadow: 0 0 0 $white;
+    }
 }
 
 .stepbtn {
