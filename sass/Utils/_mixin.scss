@@ -27,7 +27,7 @@
     }
 }
 @mixin grid-responsive-menu {
-    @media screen and (min-width: map-get($breackpoint, tablet)) {
+    @media screen and (min-width: map-get($breackpoint, desktop)) {
         display: grid;
         gap: 5%;
         grid-template-columns: 30% 30% 30%;

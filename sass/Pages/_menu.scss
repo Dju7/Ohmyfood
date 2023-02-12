@@ -11,7 +11,6 @@
     }
 }
 
-
 .restaurant-name {
     @include flex(row, start, center, nowrap);
     background: $grey-xlight;
