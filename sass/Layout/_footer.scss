@@ -16,6 +16,9 @@
         }
     a {
         color: $white;
+        &:hover {
+            color:$color-tertiary;
+        }
     }
     i {
         margin-right: 0.9em;

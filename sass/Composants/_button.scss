@@ -19,7 +19,16 @@
     background-color: $grey-xlight;
     border-radius: 20px;
     padding: 0.5rem;
-    @include shadow-effect;   
+    @include shadow-effect; 
+    &:hover {
+        background-color: rgb(249, 242, 249);
+        i {
+            color: #9356dc;
+            transform: scale(1.2);
+            transition: transform 0.4;
+        }
+
+    }  
 }
 
 .menu-btn {
