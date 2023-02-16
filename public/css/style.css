@@ -565,7 +565,7 @@ html {
 .stepbtn:hover i {
   color: #9356dc;
   transform: scale(1.2);
-  transition: transform 0.4;
+  transition: transform 0.25s ease-in-out;
 }
 
 .menu-btn {
@@ -631,10 +631,25 @@ html {
   bottom: 1.3rem;
   font-size: 1.4rem;
 }
-.card__heart i:hover {
-  transition: all 0.4s;
-  font-weight: 700;
+.card__heart i {
+  z-index: 1;
+  position: relative;
+}
+.card__heart i:hover::after {
+  opacity: 1;
+}
+.card__heart i::after {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  content: "\f004";
+  transition: opacity 300ms ease-in-out;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   color: #9356DC;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
