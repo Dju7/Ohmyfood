@@ -47,28 +47,8 @@
     &__heart {
         position:absolute;
         right: 1.1rem;
-        bottom: 1.3rem;
+        bottom: 0.9rem;
         font-size: 1.4rem;
-        i {
-         z-index: 1;
-         position:relative;
-            &:hover::after {
-                opacity: 1;
-            }
-            &::after {
-               position: absolute;
-               z-index: -1;
-               opacity: 0;
-               content: "\f004";
-               transition: opacity 300ms ease-in-out ;
-               top: 0;
-               bottom: 0;
-               left: 0;
-               right: 0;
-               color: $color-primary;
-               font-weight: 700;
-           }
-        }
-        
+        @include heart;
     }   
 }

@@ -95,6 +95,7 @@ html {
 /* ---Color principal --- */
 /* ---background-color ---*/
 /* --- Responsive ---*/
+/*--- Heart-effect ---*/
 /* --- Responsive template --- */
 .header {
   display: flex;
@@ -351,11 +352,31 @@ html {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.restaurant-name i {
-  font-size: 1.5em;
+.restaurant-name__icone {
   position: absolute;
+  font-size: 1.5rem;
   right: 2rem;
   bottom: 0.6rem;
+}
+.restaurant-name__icone i {
+  z-index: 0;
+  position: relative;
+}
+.restaurant-name__icone i:hover::after {
+  opacity: 1;
+}
+.restaurant-name__icone i::after {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  content: "\f004";
+  transition: opacity 300ms ease-in-out;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #9356DC;
+  font-weight: 700;
 }
 
 .menu {
@@ -400,22 +421,35 @@ html {
   padding: 0;
   font-size: 0.8rem;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .entry p {
   margin: 0.2rem;
   padding-bottom: 0.15rem;
   padding: 0.1rem 0;
   font-size: 0.7rem;
-  max-width: 80%;
+  width: 80%;
+  min-width: 60%;
   color: grey;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: width 0.4s ease-in-out;
 }
 .entry .price {
   position: absolute;
   right: 1rem;
-  top: 1.6rem;
+  top: 1.7rem;
+  transition: transform 300ms ease-in-out;
+}
+.entry .slide {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #99E2D0;
+  top: 0;
 }
 
 .dessert h4 {
@@ -444,21 +478,27 @@ html {
   padding: 0;
   font-size: 0.8rem;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dessert p {
   margin: 0.3rem;
   padding-bottom: 0.15rem;
   font-size: 0.7rem;
-  max-width: 80%;
+  width: 80%;
+  min-width: 60%;
   color: grey;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: width 0.4s ease-in-out;
 }
 .dessert .price {
   position: absolute;
   right: 1rem;
-  top: 1.6rem;
+  top: 1.7rem;
+  transition: transform 300ms ease-in-out;
 }
 
 .main-course {
@@ -490,21 +530,34 @@ html {
   padding: 0;
   font-size: 0.8rem;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .main-course p {
   margin: 0.3rem;
   padding-bottom: 0.15rem;
   font-size: 0.7rem;
-  max-width: 80%;
+  width: 80%;
+  min-width: 60%;
   color: grey;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: width 0.4s ease-in-out;
 }
 .main-course .price {
   position: absolute;
   right: 1rem;
-  top: 1.6rem;
+  top: 1.7rem;
+  transition: transform 300ms ease-in-out;
+}
+.main-course .slide {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #99E2D0;
+  top: 0;
 }
 
 .order {
@@ -570,12 +623,70 @@ html {
 
 .menu-btn {
   background-color: #FFFFFF;
+  overflow: hidden;
   width: 100%;
   border-radius: 20px;
   padding: 0.6rem 0 0.3rem 0.4rem;
   margin: 0.5rem;
   box-shadow: 0px 7px 10px rgba(170, 168, 168, 0.4);
   position: relative;
+  animation: menu-appear 500ms both ease-in-out;
+}
+.menu-btn--1 {
+  animation-delay: 10ms;
+}
+.menu-btn--2 {
+  animation-delay: 20ms;
+}
+.menu-btn--3 {
+  animation-delay: 30ms;
+}
+.menu-btn--4 {
+  animation-delay: 40ms;
+}
+.menu-btn--1 {
+  animation-delay: 100ms;
+}
+.menu-btn--2 {
+  animation-delay: 300ms;
+}
+.menu-btn--3 {
+  animation-delay: 500ms;
+}
+.menu-btn--4 {
+  animation-delay: 700ms;
+}
+.menu-btn:hover p {
+  width: 60%;
+}
+.menu-btn:hover .price {
+  transform: translateX(-3.2rem);
+}
+.menu-btn:hover .slide {
+  right: 0;
+}
+.menu-btn:hover .slide i {
+  transform: rotate(0);
+}
+.menu-btn .slide {
+  width: 20%;
+  height: 100%;
+  background-color: #99E2D0;
+  top: 0;
+  position: absolute;
+  right: -20%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform-origin: right;
+  transition: right 300ms ease-in-out;
+  text-align: center;
+}
+.menu-btn .slide i {
+  margin-top: 20%;
+  font-size: 1.8rem;
+  color: white;
+  transform: rotate(360deg);
+  transition: transform 500ms;
 }
 
 .card {
@@ -628,11 +739,11 @@ html {
 .card__heart {
   position: absolute;
   right: 1.1rem;
-  bottom: 1.3rem;
+  bottom: 0.9rem;
   font-size: 1.4rem;
 }
 .card__heart i {
-  z-index: 1;
+  z-index: 0;
   position: relative;
 }
 .card__heart i:hover::after {
@@ -640,7 +751,7 @@ html {
 }
 .card__heart i::after {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   opacity: 0;
   content: "\f004";
   transition: opacity 300ms ease-in-out;
@@ -650,6 +761,25 @@ html {
   right: 0;
   color: #9356DC;
   font-weight: 700;
+}
+
+@keyframes menu-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+@keyframes slide-confirmation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scalex(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

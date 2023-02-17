@@ -1,0 +1,19 @@
+@keyframes menu-appear {
+    from {
+        opacity: 0;
+        transform: translateY(15%)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(1);
+    }
+}
+
+@keyframes slide-confirmation {
+    from { 
+        transform: scale(0);
+    }
+    to {
+        transform: scalex(1);
+    }
+}

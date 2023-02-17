@@ -24,14 +24,14 @@
         font-family:'shrikhand', cursive;
         padding: .4rem;
         margin-left: .5rem;
-        margin-bottom: .5rem;;
+        margin-bottom: .5rem;
     }
-    i {
-        font-size: 1.5em;
-        position:absolute; 
+    &__icone {
+        position: absolute;
+        font-size: 1.5rem ;
         right: 2rem;
-        bottom: .6rem;
-        
+        bottom:.6rem;
+        @include heart;
     }
 }
 
@@ -66,23 +66,37 @@
         padding: 0;
         font-size: 0.8rem;
         font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     p {
         margin: 0.2rem;
         padding-bottom: 0.15rem;
         padding: .1rem 0;
         font-size: 0.7rem;
-        max-width: 80%;
+        width:80%;
+        min-width: 60%;
         color: grey;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        transition: width .4s ease-in-out;
     }
     .price {
         position: absolute;
         right: 1rem;
-        top: 1.6rem;
+        top: 1.7rem;
+        transition: transform 300ms ease-in-out; 
     }
+    .slide {
+        position: absolute;
+        width:10px;
+        height: 10px;
+        background-color: $color-tertiary;
+        top: 0;
+    }
+   
    
 }
 .dessert {
@@ -109,21 +123,27 @@
         padding: 0;
         font-size: 0.8rem;
         font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     p {
         margin: 0.3rem;
         padding-bottom: 0.15rem;
         font-size: 0.7rem;
-        max-width: 80%;
+        width: 80%;
+        min-width: 60%;
         color: grey;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        transition: width .4s ease-in-out;
     }
     .price {
         position: absolute;
         right: 1rem;
-        top: 1.6rem;
+        top: 1.7rem;
+        transition: transform 300ms ease-in-out; 
     }
 }
 .main-course {
@@ -151,21 +171,34 @@
         padding: 0;
         font-size: 0.8rem;
         font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     p {
         margin: 0.3rem;
         padding-bottom: 0.15rem;
         font-size: 0.7rem;
-        max-width: 80%;
+        width: 80%;
+        min-width: 60%;
         color: grey;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        transition: width .4s ease-in-out;
     }
     .price {
         position: absolute;
         right: 1rem;
-        top: 1.6rem;
+        top: 1.7rem;
+        transition: transform 300ms ease-in-out; 
+    }
+    .slide {
+        position: absolute;
+        width:10px;
+        height: 10px;
+        background-color: $color-tertiary;
+        top: 0;
     }
 }
 .order {
