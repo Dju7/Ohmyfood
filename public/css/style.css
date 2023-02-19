@@ -503,6 +503,13 @@ html {
 
 .main-course {
   margin-bottom: 1rem;
+  /*.slide {
+      position: absolute;
+      width:10px;
+      height: 10px;
+      background-color: $color-tertiary;
+      top: 0;
+  }*/
 }
 .main-course h4 {
   margin-left: 0.8rem;
@@ -551,13 +558,6 @@ html {
   right: 1rem;
   top: 1.7rem;
   transition: transform 300ms ease-in-out;
-}
-.main-course .slide {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #99E2D0;
-  top: 0;
 }
 
 .order {
@@ -739,7 +739,7 @@ html {
 .card__heart {
   position: absolute;
   right: 1.1rem;
-  bottom: 0.9rem;
+  bottom: 1.3rem;
   font-size: 1.4rem;
 }
 .card__heart i {
@@ -763,6 +763,70 @@ html {
   font-weight: 700;
 }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: content-appear 3s ease-in-out both;
+}
+
+.border-frame1 {
+  width: 135px;
+  height: 135px;
+  padding: 4px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FF79DA;
+  animation: square-spinning 3s ease-in-out 0s infinite alternate;
+}
+
+.border-frame2 {
+  width: 135px;
+  height: 135px;
+  padding: 4px;
+  left: -115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  transform: rotate(45deg);
+  animation: square-spinning2 3s ease-in-out 0s infinite alternate;
+}
+
+.inside-frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #353535;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+.inside-frame__ball {
+  padding-top: 20px;
+  border-radius: 10vw;
+  width: 20px;
+  height: 20px;
+  background-color: #9356DC;
+}
+.inside-frame__ball1 {
+  animation: beat 0.4s ease 0s infinite alternate;
+}
+.inside-frame__ball2 {
+  animation: beat 0.4s ease 0.2s infinite alternate;
+}
+.inside-frame__ball3 {
+  animation: beat 0.4s ease 0.4s infinite alternate;
+}
+
 @keyframes menu-appear {
   from {
     opacity: 0;
@@ -779,6 +843,59 @@ html {
   }
   to {
     transform: scalex(1);
+  }
+}
+/* -- Animation loader -- */
+@keyframes square-spinning {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes square-spinning2 {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+@keyframes content-appear {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes beat {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(0.75);
   }
 }
 

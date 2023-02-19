@@ -193,13 +193,13 @@
         top: 1.7rem;
         transition: transform 300ms ease-in-out; 
     }
-    .slide {
+    /*.slide {
         position: absolute;
         width:10px;
         height: 10px;
         background-color: $color-tertiary;
         top: 0;
-    }
+    }*/
 }
 .order {
     @include flex(row, center, center, nowrap);

@@ -17,3 +17,60 @@
         transform: scalex(1);
     }
 }
+
+/* -- Animation loader -- */
+
+@keyframes square-spinning {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes square-spinning2 {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+
+  @keyframes content-appear {
+	0% {
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+	}
+  }
+
+  @keyframes beat {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
