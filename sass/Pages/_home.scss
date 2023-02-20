@@ -1,3 +1,4 @@
+/* -- Presentation - réception --*/
 
 .receptionbox {
     @include flex(column, center, center, nowrap);
@@ -38,6 +39,8 @@
         }
        
 }
+
+/* -- How to works -- */
 
 .steps {
     /*@include flex(column, center, center, nowrap);*/
@@ -84,6 +87,8 @@
         }
     }
 }
+
+/* -- Restaurant Card -- */
 
 .card-restaurant {
     background-color: $grey-xlight;

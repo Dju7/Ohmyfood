@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -94,6 +95,7 @@ html {
 } /*--- optional base font size ---*/
 /* ---Color principal --- */
 /* ---background-color ---*/
+/* --- color Main boutton -- */
 /* --- Responsive ---*/
 /*--- Heart-effect ---*/
 /* --- Responsive template --- */
@@ -159,6 +161,7 @@ html {
   margin: 0 auto 20px auto;
 }
 
+/* -- Presentation - réception --*/
 .receptionbox {
   display: flex;
   flex-direction: column;
@@ -210,6 +213,7 @@ html {
   font-size: 0.8rem;
 }
 
+/* -- How to works -- */
 .steps {
   /*@include flex(column, center, center, nowrap);*/
   margin: 3rem 1rem;
@@ -269,6 +273,7 @@ html {
   white-space: nowrap;
 }
 
+/* -- Restaurant Card -- */
 .card-restaurant {
   background-color: #F7F7F7;
   padding: 0.3rem;
@@ -392,6 +397,7 @@ html {
   }
 }
 
+/* -- Entry list -- */
 .entry {
   margin-bottom: 1rem;
 }
@@ -452,6 +458,7 @@ html {
   top: 0;
 }
 
+/* -- Dessert list -- */
 .dessert h4 {
   margin-left: 0.8rem;
   font-weight: 400;
@@ -501,15 +508,9 @@ html {
   transition: transform 300ms ease-in-out;
 }
 
+/* -- Main-course list -- */
 .main-course {
   margin-bottom: 1rem;
-  /*.slide {
-      position: absolute;
-      width:10px;
-      height: 10px;
-      background-color: $color-tertiary;
-      top: 0;
-  }*/
 }
 .main-course h4 {
   margin-left: 0.8rem;
@@ -560,6 +561,7 @@ html {
   transition: transform 300ms ease-in-out;
 }
 
+/* -- Order button -- */
 .order {
   display: flex;
   flex-direction: row;
@@ -778,10 +780,9 @@ html {
 }
 
 .border-frame1 {
-  width: 135px;
-  height: 135px;
-  padding: 4px;
-  border-radius: 20px;
+  width: 125px;
+  height: 125px;
+  padding: 5px;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -793,16 +794,15 @@ html {
 }
 
 .border-frame2 {
-  width: 135px;
-  height: 135px;
-  padding: 4px;
+  width: 125px;
+  height: 125px;
+  padding: 5px;
   left: -115px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  border-radius: 20px;
   background: #99E2D0;
   transform: rotate(45deg);
   animation: square-spinning2 3s ease-in-out 0s infinite alternate;
@@ -811,7 +811,6 @@ html {
 .inside-frame {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -822,7 +821,6 @@ html {
   padding-top: 2px;
 }
 .inside-frame__ball {
-  border: solid 1px white;
   padding-top: 20px;
   border-radius: 100vw;
   width: 20px;
@@ -907,7 +905,7 @@ html {
   }
   to {
     opacity: 0.25;
-    transform: scale(0.75);
+    transform: scale(0.7);
   }
 }
 

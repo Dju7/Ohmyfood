@@ -41,6 +41,9 @@
     padding-top: 1rem;
     @include grid-responsive-menu;
 }
+
+/* -- Entry list -- */
+
 .entry {
     margin-bottom: 1rem;;
     h4 {
@@ -95,10 +98,11 @@
         height: 10px;
         background-color: $color-tertiary;
         top: 0;
-    }
-   
-   
+    }  
 }
+
+/* -- Dessert list -- */
+
 .dessert {
     h4 {
         margin-left: .8rem;
@@ -146,6 +150,9 @@
         transition: transform 300ms ease-in-out; 
     }
 }
+
+/* -- Main-course list -- */
+
 .main-course {
     margin-bottom: 1rem;
     h4 {
@@ -193,14 +200,10 @@
         top: 1.7rem;
         transition: transform 300ms ease-in-out; 
     }
-    /*.slide {
-        position: absolute;
-        width:10px;
-        height: 10px;
-        background-color: $color-tertiary;
-        top: 0;
-    }*/
 }
+
+/* -- Order button -- */
+
 .order {
     @include flex(row, center, center, nowrap);
     background-color: $grey-xlight;

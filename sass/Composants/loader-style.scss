@@ -9,10 +9,9 @@
 }
 
 .border-frame1 {
-  width: 135px;
-  height: 135px;
-  padding: 4px;
-  border-radius: 20px;
+  width: 125px;
+  height: 125px;
+  padding: 5px;
   position: absolute;
   @include flex(row, center, center, nowrap);
   background: $color-secondary;
@@ -20,12 +19,11 @@
 }
 
 .border-frame2 {
-  width: 135px;
-  height: 135px;
-  padding: 4px;
+  width: 125px;
+  height: 125px;
+  padding: 5px;
   left: -115px;
   @include flex(row, center, center, nowrap);
-  border-radius: 20px;
   background: $color-tertiary;
   transform: rotate(45deg);
   animation: square-spinning2 3s ease-in-out 0s infinite alternate;
@@ -34,13 +32,11 @@
 .inside-frame {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   @include flex(row, space-around, center, nowrap);
   background-color: $color-footer;
   padding-right: 2px;
   padding-top: 2px;
   &__ball {
-    border: solid 1px white;
     padding-top: 20px;
     border-radius: 100vw;
     width: 20px;
