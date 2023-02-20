@@ -422,41 +422,6 @@ html {
   flex-wrap: nowrap;
   margin: 0.3rem 0.8rem;
 }
-.entry span {
-  margin: 0.2rem;
-  padding: 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.entry p {
-  margin: 0.2rem;
-  padding-bottom: 0.15rem;
-  padding: 0.1rem 0;
-  font-size: 0.7rem;
-  width: 80%;
-  min-width: 60%;
-  color: grey;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: width 0.4s ease-in-out;
-}
-.entry .price {
-  position: absolute;
-  right: 1rem;
-  top: 1.7rem;
-  transition: transform 300ms ease-in-out;
-}
-.entry .slide {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #99E2D0;
-  top: 0;
-}
 
 /* -- Dessert list -- */
 .dessert h4 {
@@ -479,33 +444,6 @@ html {
   align-items: center;
   flex-wrap: nowrap;
   margin: 0rem 0.8rem;
-}
-.dessert span {
-  margin: 0.2rem;
-  padding: 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.dessert p {
-  margin: 0.3rem;
-  padding-bottom: 0.15rem;
-  font-size: 0.7rem;
-  width: 80%;
-  min-width: 60%;
-  color: grey;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: width 0.4s ease-in-out;
-}
-.dessert .price {
-  position: absolute;
-  right: 1rem;
-  top: 1.7rem;
-  transition: transform 300ms ease-in-out;
 }
 
 /* -- Main-course list -- */
@@ -532,33 +470,6 @@ html {
   align-items: center;
   flex-wrap: nowrap;
   margin: 0.3rem 0.8rem;
-}
-.main-course span {
-  margin: 0.2rem;
-  padding: 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.main-course p {
-  margin: 0.3rem;
-  padding-bottom: 0.15rem;
-  font-size: 0.7rem;
-  width: 80%;
-  min-width: 60%;
-  color: grey;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: width 0.4s ease-in-out;
-}
-.main-course .price {
-  position: absolute;
-  right: 1rem;
-  top: 1.7rem;
-  transition: transform 300ms ease-in-out;
 }
 
 /* -- Order button -- */
@@ -668,7 +579,7 @@ html {
   right: 0;
 }
 .menu-btn:hover .slide i {
-  transform: rotate(0);
+  transform: rotate(360deg);
 }
 .menu-btn .slide {
   width: 20%;
@@ -680,14 +591,14 @@ html {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   transform-origin: right;
-  transition: right 300ms ease-in-out;
+  transition: right 300ms;
   text-align: center;
 }
 .menu-btn .slide i {
   margin-top: 20%;
   font-size: 1.8rem;
   color: white;
-  transform: rotate(360deg);
+  transform: rotate(0);
   transition: transform 500ms;
 }
 
@@ -907,6 +818,34 @@ html {
     opacity: 0.25;
     transform: scale(0.7);
   }
+}
+.entry__list span, .dessert__list span, .main-course__list span {
+  margin: 0.2rem;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.entry__list p, .dessert__list p, .main-course__list p {
+  margin: 0.2rem;
+  padding-bottom: 0.15rem;
+  padding: 0.1rem 0;
+  font-size: 0.7rem;
+  width: 80%;
+  min-width: 60%;
+  color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: width 0.4s;
+}
+.entry__list .price, .dessert__list .price, .main-course__list .price {
+  position: absolute;
+  right: 1rem;
+  top: 1.7rem;
+  transition: transform 300ms;
 }
 
 /*# sourceMappingURL=style.css.map */
