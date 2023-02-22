@@ -43,21 +43,9 @@
     animation: menu-appear 500ms both ease-in-out;
     @for $i from 1 through 4 {
         &--#{$i} {
-            animation-delay: 10ms * $i;
+            animation-delay: 150ms * $i;
         }
         }
-    &--1 {
-        animation-delay: 100ms;
-    }
-    &--2 {
-        animation-delay: 300ms;
-    }
-    &--3 {
-        animation-delay: 500ms;
-    }
-    &--4 {
-        animation-delay: 700ms;
-    }
     &:hover p {
         width:60%;
     }

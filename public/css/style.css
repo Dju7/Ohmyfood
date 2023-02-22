@@ -375,7 +375,7 @@ html {
   z-index: 0;
   opacity: 0;
   content: "\f004";
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
   top: 0;
   bottom: 0;
   left: 0;
@@ -546,28 +546,16 @@ html {
   animation: menu-appear 500ms both ease-in-out;
 }
 .menu-btn--1 {
-  animation-delay: 10ms;
-}
-.menu-btn--2 {
-  animation-delay: 20ms;
-}
-.menu-btn--3 {
-  animation-delay: 30ms;
-}
-.menu-btn--4 {
-  animation-delay: 40ms;
-}
-.menu-btn--1 {
-  animation-delay: 100ms;
+  animation-delay: 150ms;
 }
 .menu-btn--2 {
   animation-delay: 300ms;
 }
 .menu-btn--3 {
-  animation-delay: 500ms;
+  animation-delay: 450ms;
 }
 .menu-btn--4 {
-  animation-delay: 700ms;
+  animation-delay: 600ms;
 }
 .menu-btn:hover p {
   width: 60%;
@@ -667,7 +655,7 @@ html {
   z-index: 0;
   opacity: 0;
   content: "\f004";
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
   top: 0;
   bottom: 0;
   left: 0;
