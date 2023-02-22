@@ -6,6 +6,8 @@
     flex-wrap: $flex-wrap;
 }
 
+/* -- shadow -- */
+
 @mixin header-shadow {
     box-shadow: 0 3px 3px rgb(213, 213, 213);
 }
