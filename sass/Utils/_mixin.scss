@@ -39,7 +39,9 @@
               bottom: 0;
               left: 0;
               right: 0;
-              color: $color-primary;
+              background: linear-gradient(to top, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
               font-weight: 700;
           }
        }
