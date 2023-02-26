@@ -30,7 +30,8 @@
         position: absolute;
         font-size: 1.5rem ;
         right: 2rem;
-        bottom:.6rem;
+        bottom:.7rem;
+        cursor: pointer;
         @include heart;
     }
 }
