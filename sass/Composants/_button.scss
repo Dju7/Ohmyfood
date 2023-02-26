@@ -47,7 +47,7 @@
         }
         }
     &:hover p {
-        width:60%;
+        width:50%;
     }
     &:hover .price {
      transform: translateX(-3.2rem);
@@ -60,19 +60,19 @@
     }
     
     .slide {
-        width: 20%;
+        width: 3.2rem;
         height: 100%;
         background-color: $color-tertiary;
         top: 0;
         position: absolute;
-        right: -20%;
+        right: -3.2rem;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         transform-origin: right;
         transition: right 300ms;
         text-align: center; 
         i {
-            margin-top: 20%;
+            margin-top: 25%;
             font-size: 1.8rem;
             color: white;
             transform: rotate(0);

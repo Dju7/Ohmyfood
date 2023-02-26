@@ -561,7 +561,7 @@ html {
   animation-delay: 600ms;
 }
 .menu-btn:hover p {
-  width: 60%;
+  width: 50%;
 }
 .menu-btn:hover .price {
   transform: translateX(-3.2rem);
@@ -573,12 +573,12 @@ html {
   transform: rotate(360deg);
 }
 .menu-btn .slide {
-  width: 20%;
+  width: 3.2rem;
   height: 100%;
   background-color: #99E2D0;
   top: 0;
   position: absolute;
-  right: -20%;
+  right: -3.2rem;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   transform-origin: right;
@@ -586,7 +586,7 @@ html {
   text-align: center;
 }
 .menu-btn .slide i {
-  margin-top: 20%;
+  margin-top: 25%;
   font-size: 1.8rem;
   color: white;
   transform: rotate(0);
@@ -813,6 +813,8 @@ html {
   }
 }
 .entry__list span, .dessert__list span, .main-course__list span {
+  display: inline-block;
+  width: 80%;
   margin: 0.2rem;
   padding: 0;
   font-size: 0.8rem;
@@ -822,12 +824,12 @@ html {
   white-space: nowrap;
 }
 .entry__list p, .dessert__list p, .main-course__list p {
-  margin: 0.2rem;
+  margin: 0 0 0.2rem 0.2rem;
   padding-bottom: 0.15rem;
   padding: 0.1rem 0;
   font-size: 0.7rem;
   width: 80%;
-  min-width: 60%;
+  min-width: 50%;
   color: grey;
   overflow: hidden;
   text-overflow: ellipsis;
