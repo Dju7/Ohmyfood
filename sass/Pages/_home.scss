@@ -8,15 +8,28 @@
             @include flex(row, center, center, nowrap);
             background-color: $grey-light;
             p {
-                margin-left: 0.2rem;
-                padding: 0.4rem;
+                margin-left: 0rem;
+                padding: 0.3rem;
                 position: relative;
                 i {
                     position: absolute;
-                    left: -3ch;
+                    left: 2.7rem;
+                    top: 0.6rem;
                     height: 1rem;
                     font-size: 0.8rem;
                 }  
+                .city {
+                    border-style: none;
+                    outline: 0;
+                    margin-left: 4rem;
+                    font-size: 0.8rem;
+                    padding: 0.2rem 0 0.2rem 0;
+                    background-color: $grey-light;
+                    &::placeholder {
+                        opacity: 1;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
             }
         }
         &__presentation {
@@ -30,8 +43,7 @@
                 font-weight: 800;
             }
             p {
-                font-weight: 200;
-                margin: 0;
+                margin: 0; 
             }
             a {
                 font-size: 0.8rem;
